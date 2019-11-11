@@ -54,9 +54,9 @@ Where Results should be an array of objects with properties
 * Score
 * Distance
 
-The Results should be list of services that matched the service name that was inputted.
-The Score should be how well the service name matched
-The Distance should be how far away the result item is from the provided location
+The Results should be list of services that matched the service name that was inputted. <br>
+The Score should be how well the service name matched. <br>
+The Distance should be how far away the result item is from the provided location.
 
 Example output:
 ```
