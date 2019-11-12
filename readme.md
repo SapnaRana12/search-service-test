@@ -10,7 +10,8 @@ For this exercise the service can communicate over http requests or the standard
 ### General info
 Our goal with this exercise is to see how you approach writing code. <br>
 The specific implementations of scoring/filtering data is not the most important part. <br>
-Using 3rd party libraries and packages are okay, but make sure we can see who you are as a coder.
+Using 3rd party libraries and packages are okay, but make sure we can see who you are as a coder. <br>
+Try to not spend more than 2 hours on the exercise.
 
 ### Data
 Data can be read from the file "data.json" (located in root in this repository)
