@@ -7,9 +7,13 @@ How well the result has to match the input is left to the implementor to decide.
 
 For this exercise the service can communicate over http requests or the standard input/output.
 
+### General info
+Our goal with this exercise is to see how you approach writing code. <br>
+The specific implementations of scoring/filtering data is not the most important part. <br>
+Using 3rd party libraries and packages are okay, but make sure we can see who you are as a code.
 
 ### Data
-Data can be read from the file "data.json"
+Data can be read from the file "data.json" (located in root in this repository)
 
 Example data:
 ```
@@ -55,7 +59,7 @@ Where Results should be an array of objects with properties
 * Distance
 
 The Results should be list of services that matched the service name that was inputted. <br>
-The Score should be how well the service name matched. <br>
+The Score should be how well the service name matched according to a metric of your choice. <br>
 The Distance should be how far away the result item is from the provided location.
 
 Example output:
@@ -87,6 +91,3 @@ Example output:
     ]
 }
 ```
-
-
-
