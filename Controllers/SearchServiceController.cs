@@ -11,12 +11,9 @@ namespace SearchEngine.Controllers
     public class SearchServiceController : ControllerBase
     {
 
-        private readonly ISearchServiceListService _searchServiceListService;
-
-        public SearchServiceController(ISearchServiceListService searchServiceListService)
+        public SearchServiceController()
         {
-            var geocoder = new GeoPositionService();
-            _searchServiceListService = searchServiceListService;
+            
         }
 
         /// <summary>
@@ -28,11 +25,11 @@ namespace SearchEngine.Controllers
         [HttpGet("service-details-by-name")]
         [ProducesResponseType(typeof(ServiceOutputResponse), (int)HttpStatusCode.OK)]
         public async Task<IActionResult> GetServiceDetailsbyName([Required][FromQuery][FromRoute(Name = "service-name")] string serviceName,
-            [Required][FromQuery][FromRoute(Name = "location")] string location)
+            [Required][FromQuery][FromRoute(Name = "location")] string location,[FromServices] ISearchServiceListService searchServiceListService)
         {
             try
             {
-                var result = await _searchServiceListService.GetServiceDetailsByName(serviceName, location);
+                var result = await searchServiceListService.GetServiceDetailsByName(serviceName, location);
                 return Ok(result);
             }
             catch (Exception ex)
